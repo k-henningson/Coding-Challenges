@@ -2,7 +2,9 @@
 
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
-
-function grow(nums){
-  return nums.reduce((accumulator, currentVal) => accumulator *= currentVal, 1);
+function grow(nums) {
+  return nums.reduce(
+    (accumulator, currentVal) => (accumulator *= currentVal),
+    1
+  );
 }
