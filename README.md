@@ -2,3 +2,4 @@
 <br></br>
 ## Platforms
 - Codewars 
+- Lighthouse Labs
