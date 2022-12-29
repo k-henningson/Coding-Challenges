@@ -12,6 +12,16 @@ const instructorWithLongestName = function (instructors) {
   return result;
 };
 
+//Other solution
+const instructorWithLongestName2 = function (instructors) {
+  return instructors.reduce((acc, cur) => {
+    if (cur.name.length > acc.name.length) {
+      return cur;
+    }
+    return acc;
+  }, instructors[0]);
+};
+
 console.log(
   instructorWithLongestName([
     { name: "Samuel", course: "iOS" },
@@ -21,7 +31,7 @@ console.log(
   ])
 );
 console.log(
-  instructorWithLongestName([
+  instructorWithLongestName2([
     { name: "Matthew", course: "Web" },
     { name: "David", course: "iOS" },
     { name: "Domascus", course: "Web" },
