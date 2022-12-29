@@ -4,7 +4,7 @@
 
 const instructorWithLongestName = function (instructors) {
   let result = instructors[0];
-  instructors.filter((e) => {
+  instructors.forEach((e) => {
     if (e.name.length > result.name.length) {
       result = e;
     }
