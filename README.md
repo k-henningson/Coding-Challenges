@@ -3,3 +3,4 @@
 ## Platforms
 - Codewars 
 - Lighthouse Labs
+- Leet Code
