@@ -19,3 +19,7 @@ function gimme(triplet) {
     })[1]
   );
 }
+
+function gimme2(triplet) {
+  return triplet.indexOf([...triplet].sort((a, b) => a - b)[1]);
+}
