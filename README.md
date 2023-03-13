@@ -6,3 +6,5 @@
 - NeetCode 150
 ## Languages
 [![My Skills](https://skillicons.dev/icons?i=typescript,javascript,python)](https://skillicons.dev)
+## Resources
+[Python testing](https://realpython.com/python-testing/#testing-your-code)
