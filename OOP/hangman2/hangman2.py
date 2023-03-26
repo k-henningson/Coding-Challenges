@@ -1,8 +1,11 @@
-import random
 import string
 
 
 class Hangman:
+    """
+    The classic hangman game. Guess a letter to reveal the letter
+    if the secret word. You have 6 lives to guess all the letters.
+    """
     def __init__(self, secret_word):
         self._lives = 6
         self._secret_word = secret_word.upper()
