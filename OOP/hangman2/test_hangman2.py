@@ -31,6 +31,10 @@ class TestHangman(unittest.TestCase):
         self.assertEqual(hangman.guess(
             "n"), 'Congratulations, you win! The secret word was PYTHON.')
 
+    def test_solution_is_always_uppercase(self):
+        for letter in ("h", "H"):
+            hangman = Hangman("hello")
+            self.assertEqual("H____", hangman.guess(letter))
 
 if __name__ == '__main__':
     unittest.main()
