@@ -60,7 +60,7 @@ class Roulette(Hangman):
     in the secret word. You have 6 lives to guess all the letters. Guess the roulette letter and the game ends immediately.
     """
 
-    def __init__(self, secret_word, roulette_letter,):
+    def __init__(self, secret_word, roulette_letter):
         self._roulette_letter = roulette_letter.upper()
 
         super().__init__(secret_word)
