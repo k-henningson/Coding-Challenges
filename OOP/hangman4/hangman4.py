@@ -65,23 +65,13 @@ class Roulette(Hangman):
 
         super().__init__(secret_word)
 
-    def roulette_guess(self, letter):
+    def guess(self, letter):
         """Guesses a letter. Returns the currently solved secret word."""
         uppercase_letter = letter.upper()
         if uppercase_letter == self._roulette_letter:
             return self._roulette_death()
-        if uppercase_letter in self._alphabet:
-            if not uppercase_letter in self._secret_word and not uppercase_letter in self._letters_guessed:
-                self._decrement_lives()
-                if (self._lives == 0):
-                    return self._end_game()
-
-            self._letters_guessed.add(uppercase_letter)
-            if self._secret_word == self._update_secret_word():
-                return self._win_game()
-
-        return self._update_secret_word()
+        else:
+            return super().guess(letter)
 
     def _roulette_death(self):
-        print(f'Sorry, you guessed the Russian roulette letter and lose all your remaining lives. Please try again.')
-        return self._end_game()
+        return super()._end_game()
