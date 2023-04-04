@@ -55,19 +55,19 @@ class TestHangman(unittest.TestCase):
 class TestRoulette(unittest.TestCase):
     def test_guess_word_prints_correct_underscore_length(self):
         roulette = Roulette('hockey', 'l')
-        self.assertEqual(roulette.roulette_guess('a'), '______')
+        self.assertEqual(roulette.guess('a'), '______')
 
     def test_guess_incorrect_letter(self):
         roulette = Roulette('test', 'l')
-        self.assertEqual(roulette.roulette_guess("a"), '____')
+        self.assertEqual(roulette.guess("a"), '____')
 
     def test_guess_correct_letter(self):
         roulette = Roulette('apple', 'p')
-        self.assertEqual(roulette.roulette_guess("a"), 'A____')
+        self.assertEqual(roulette.guess("a"), 'A____')
 
     def test_roulette_letter_kills_game(self):
         roulette = Roulette('putin', 'p')
-        self.assertEqual(roulette.roulette_guess(
+        self.assertEqual(roulette.guess(
             "p"), 'Game over, the secret word was PUTIN.')
 
 
