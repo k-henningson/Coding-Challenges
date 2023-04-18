@@ -1,11 +1,15 @@
 import unittest
-from chess import Board
+from chess import *
 
 
 class TestChess(unittest.TestCase):
-    def test_display_board_empty_prints_8x8_matrix(self):
-        board = Board()
-        self.assertEqual(board.display_board(), "_ _ _ _ _ _ _ _ \n" * 8)
+    def test_a_piece_can_be_black(self):
+        black_piece = Piece(Colour.BLACK)
+        self.assertEqual(black_piece.colour, Colour.BLACK)
+
+    def test_a_piece_can_be_white(self):
+        white_piece = Piece(Colour.WHITE)
+        self.assertEqual(white_piece.colour, Colour.WHITE)
 
 
 if __name__ == '__main__':
